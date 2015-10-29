@@ -1,0 +1,2 @@
+# server_session_manager
+OwnCloud_CAS_session_manager
