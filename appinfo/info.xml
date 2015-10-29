@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<info>
+    <id>server_session_manager</id>
+    <name>server session management</name>
+    <description>Serverside session management, for global logout purpose</description>
+    <version>1.0</version>
+    <licence>AGPL</licence>
+    <author>Mamadou Cissé</author>
+
+	<types>
+		<session/>
+    </types>
+
+
+	<!-- <documentation>
+        <user>http://doc.owncloud.org</user>
+        <admin>http://doc.owncloud.org</admin>
+    </documentation>
+
+    <website>http://www.owncloud.org</website>
+
+     deprecated, just for reference 
+    <public>
+        <file id="caldav">appinfo/caldav.php</file>
+    </public>
+
+    <remote>
+        <file id="caldav">appinfo/caldav.php</file>
+    </remote>
+
+    <standalone />
+
+    <default_enable />
+    <shipped>true</shipped>
+    -->
+</info>
