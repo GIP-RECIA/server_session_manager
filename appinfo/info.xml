@@ -3,7 +3,7 @@
     <id>server_session_manager</id>
     <name>server session management</name>
     <description>Serverside session management, for global logout purpose</description>
-    <version>1.0</version>
+    <version>2.0</version>
     <licence>AGPL</licence>
     <author>Mamadou Cissé</author>
 
