@@ -1,23 +1,24 @@
 table.adminsettings {
-/* 	max-width: 550px; */
-	white-space: normal;
+/*      max-width: 550px; */
+        white-space: normal;
 }
 
 table.adminsettings th.small {
-	width: 5em;
+        width: 5em;
 }
 
 table.adminsettings tbody tr {
-	height: 2.5em;
+        height: 2.5em;
 }
 
 table.adminsettings th.small,
 table.adminsettings td.small {
-	text-align: center;
+        text-align: center;
 }
 
 table.adminsettings td.small label {
-	width: 100%;
-	height: 100%;
-	display: block;
+        width: 100%;
+        height: 100%;
+        display: block;
 }
+
