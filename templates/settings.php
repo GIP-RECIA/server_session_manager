@@ -50,7 +50,7 @@ style ('server_session_manager', 'preferencesadmin');
 					si coché la fonction de changement du <strong>nom affiché</strong> sera accessible aux utilisateurs
 				</td>
 			</tr>
-			<tr>
+		<!--	<tr>
 				<td class="small"><label for="connectFromLogin"> <input
 						type="checkbox" id="connectFromLogin"
 						<?php if (isset($_['connectFromLogin']) && $_['connectFromLogin'] ==1 ): ?> checked="checked"<?php endif; ?>
@@ -59,7 +59,7 @@ style ('server_session_manager', 'preferencesadmin');
 				<td class="activity_select_group" data-select-group="file_restored">
 					si coché la fonction de <strong>login</strong> à partir du <strong>formulaire</strong> sera accessible aux utilisateurs
 				</td>
-			</tr>
+			</tr> -->
 			<tr>
 			<td class="small"> <input type="submit" value="Validez" /></td>
 			<td></td>

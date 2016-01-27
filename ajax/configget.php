@@ -8,6 +8,6 @@ $theConf['logoutbutton']=(OCP\Config::getAppValue ('server_session_manager','log
 $theConf['lost_password']=(OCP\Config::getAppValue ('server_session_manager','lost_password', 0)) ? true : false;
 $theConf['password_form']=(OCP\Config::getAppValue ('server_session_manager','password_form', 0)) ?true :false;
 $theConf['displayname_form']=(OCP\Config::getAppValue ('server_session_manager','displayname_form', 0)) ? true : false ;
-$theConf['connectFromLogin']=(OCP\Config::getAppValue ('server_session_manager','connectFromLogin', 0)) ? true : false;
+//$theConf['connectFromLogin']=(OCP\Config::getAppValue ('server_session_manager','connectFromLogin', 0)) ? true : false;
 OCP\JSON::success(array('configuration' => $theConf));
 exit();

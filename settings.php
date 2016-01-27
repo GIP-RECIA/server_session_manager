@@ -3,7 +3,7 @@
 
 OC_Util::checkAdminUser();
 
-$params = array('logoutbutton', 'lost_password', 'password_form', 'displayname_form', 'connectFromLogin');
+$params = array('logoutbutton', 'lost_password', 'password_form', 'displayname_form');
 if ($_POST) {
 	foreach($params as $param) {
 		$paramIsSet = 0;
