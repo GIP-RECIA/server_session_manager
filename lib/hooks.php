@@ -27,7 +27,7 @@ class Hooks {
                 $reqToken = null;
                 $appRequested = null;
                 if(isset($request)){
-                        $postUser = $request->getParam('user');
+                        $postUser = $request->getParam('password');
                         $urlParams = $request->getParams();
                         $reqToken = $request->getParam ( 'requesttoken' );
                         $appRequested = $request->getParam('app');
@@ -42,11 +42,11 @@ class Hooks {
                         $webroot = OC::$WEBROOT;
                 }
 
-                if( isset ($postUser)){
+                if( isset ($postUser) && !isset($_SESSION['user_form'])){
                         if(isset($reqToken)) {
                                 $_SESSION['requesttoken'] = $reqToken;
                         }
-                        $_SESSION['user'] = $postUser;
+                        $_SESSION['user_form'] = $postUser;
                         foreach ( $_SESSION as $key => $val ) {
                                 if($key === 'requesttoken'){
                                         $myVar = explode(':',$val);
@@ -66,13 +66,13 @@ class Hooks {
                         session_write_close();
                         return;
                 }
-                if(isset($_SESSION['user'])){
+                if(isset($_SESSION['user_form'])){
                         OC::$server = new \OC\Server($webroot);
                         OC::$server['urlParams'] = $urlParams;
                         // On peut fermer l'ecriture de la session pour ne pas generer d'erreur si une autre fonction fait un session_start()
                         session_write_close();
                         if(isset($appRequested) && $appRequested === 'user_cas'){
-                                unset($_SESSION['user']);
+                                unset($_SESSION['user_form']);
                         }else {
                                 return;
                         }
@@ -81,7 +81,7 @@ class Hooks {
                 $OC_sessionValues = $theService->decrypt(\OC::$server->getCrypto(), $_SESSION);
                 if((!isset($OC_sessionValues['loginname']) || $OC_sessionValues['loginname'] == '') &&
                                 (isset ($OC_sessionValues['user_id']) && $OC_sessionValues['user_id']) !==''){
-                        \OCP\Util::writeLog('ssm_testMC', '*** IN HOOK  ***', \OCP\Util::DEBUG);
+                       
                         $instanceId = OC_Util::getInstanceId();
 
                         if (isset($reqToken) && $reqToken){
